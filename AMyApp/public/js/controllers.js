@@ -3,7 +3,7 @@ var app = angular.module("myApp", []);
 
 app.controller('myCtrl', function($scope) {
     $scope.firstName = "John";
-    $scope.middleName = "Joe";
+    $scope.middleName = "Uday";
     $scope.lastName = "Doe";
 });
 
