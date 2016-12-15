@@ -12,10 +12,10 @@
  
 <title>My Cool website</title>
 <!-- add styles -->
-<link href="main.css" rel="stylesheet" type="text/css" />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
 <!-- <script src="js/controllers.js"></script> -->
- <script src="js/script.js"></script>
- <!-- <script type="text/javascript" src="js/PersonCtrl.js"></script> -->
+ <script type="text/javascript" src="app.js"></script>
+ <script type="text/javascript" src="app/controllers/PersonCtrl.js"></script> 
 
 
 </head>
@@ -26,11 +26,11 @@
 <!-- Adding the ng-app declaration to initialize AngularJS -->
 <nav id="main-nav">
 	<!-- The navigation menu will get the value of the "active" variable as a class.
-		 The $event.preventDefault() stops the page from jumping when a link is clicked. -->
+		 The $<event class="prev"></event>entDefault() stops the page from jumping when a link is clicked. -->
 
 	<ul>
   <li><a href="#/">Add</a></li>
-  <li><a href="#/person">View</a></li>
+  <li><a href="#/person">Edit</a></li>
   <li><a href="#/contact">Search</a></li>
   <li style="float:right"><a class="active" href="#about">About</a></li>
 </ul> 
