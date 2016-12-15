@@ -1,5 +1,5 @@
 // Define a new module for our app. The array holds the names of dependencies if any.
-var app = angular.module("myApp", []);
+var app = angular.module("myApp");
 
 app.controller('myCtrl', function($scope) {
     $scope.firstName = "John";
@@ -8,13 +8,17 @@ app.controller('myCtrl', function($scope) {
 });
 
 app.controller('AppCtrl', ['$scope', '$http', function($scope, $http) {
-    console.log("Hello World from controller");
+
+   $scope.firstName = "John";
+    $scope.middleName = "Uday";
+    $scope.lastName = "Doe";
+    console.log("Adding.............");
    
-   $scope.addContact = function() {
+   $scope.addContact = function(person) {
   console.log($scope.person);
   $http.post('/persons', $scope.person).success(function(response) {
     console.log(response);
-    refresh();
+    
   });
 };
  

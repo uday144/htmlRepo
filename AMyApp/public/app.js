@@ -29,11 +29,7 @@
 			});
 	});
 
-	// create the controller and inject Angular's $scope
-	myApp.controller('mainController', function($scope) {
-		// create a message to display in our view
-		$scope.message = 'Everyone come and see how good I look!';
-	});
+
 
 	myApp.controller('aboutController', function($scope) {
 		$scope.message = 'Look! I am an about page.';
@@ -43,28 +39,4 @@
 		$scope.message = 'Contact us! JK. This is just a demo.';
 	});
 
-	
 
-myApp.controller('myCtrl', function($scope) {
-    $scope.firstName = "John";
-    $scope.middleName = "Uday";
-    $scope.lastName = "Doe";
-});
-
-myApp.controller('AppCtrl', ['$scope', '$http', function($scope, $http) {
-
-	 $scope.firstName = "John";
-    $scope.middleName = "Uday";
-    $scope.lastName = "Doe";
-    console.log("Adding.............");
-   
-   $scope.addContact = function(person) {
-  console.log($scope.person);
-  $http.post('/persons', $scope.person).success(function(response) {
-    console.log(response);
-    
-  });
-};
- 
-
-}]);
