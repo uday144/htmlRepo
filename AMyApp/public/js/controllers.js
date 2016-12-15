@@ -7,9 +7,16 @@ app.controller('myCtrl', function($scope) {
     $scope.lastName = "Doe";
 });
 
-app.controller('AppCtrl', function($scope) {
-    $scope.firstName = "John";
-    $scope.lastName = "Doe";
-});
+app.controller('AppCtrl', ['$scope', '$http', function($scope, $http) {
+    console.log("Hello World from controller");
+   
+   $scope.addContact = function() {
+  console.log($scope.person);
+  $http.post('/persons', $scope.person).success(function(response) {
+    console.log(response);
+    refresh();
+  });
+};
+ 
 
-
+}]);

@@ -8,13 +8,18 @@
 			// route for the home page
 			.when('/', {
 				templateUrl : 'pages/home.html',
-				controller  : 'mainController'
+				controller  : 'AppCtrl'
 			})
 
 			// route for the about page
 			.when('/about', {
 				templateUrl : 'pages/about.html',
 				controller  : 'aboutController'
+			})
+// route for the about page
+			.when('/person', {
+				templateUrl : 'pages/person.html',
+				controller  : 'PersonCtrl'
 			})
 
 			// route for the contact page
@@ -46,7 +51,20 @@ myApp.controller('myCtrl', function($scope) {
     $scope.lastName = "Doe";
 });
 
-myApp.controller('AppCtrl', function($scope) {
-    $scope.firstName = "John";
+myApp.controller('AppCtrl', ['$scope', '$http', function($scope, $http) {
+
+	 $scope.firstName = "John";
+    $scope.middleName = "Uday";
     $scope.lastName = "Doe";
-});
+    console.log("Adding.............");
+   
+   $scope.addContact = function(person) {
+  console.log($scope.person);
+  $http.post('/persons', $scope.person).success(function(response) {
+    console.log(response);
+    
+  });
+};
+ 
+
+}]);
