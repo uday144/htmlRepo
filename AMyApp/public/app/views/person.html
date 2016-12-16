@@ -15,7 +15,7 @@
 	</thead>
 	<tbody>
 		<tr ng-repeat="person in persons" class='info'>
-			<td><a ng-href="#/person/{{person._id}}">{{person.name}}</a></td>
+			<td><{{person.name}}</a></td>
 			<td>{{person.email}}</td>
 			<td>{{person.number}}</td>
 			<td><button ng-click="searchPerson(person._id);" data-toggle="modal" data-target="#personEditModal" class="btn btn-info btn-sm">Edit</button></td>

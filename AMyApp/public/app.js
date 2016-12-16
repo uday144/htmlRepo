@@ -19,13 +19,13 @@
 // route for the about page
 			.when('/person', {
 				templateUrl : 'app/views/person.html',
-				controller  : 'PersonCtrl'
+				controller  : 'myCtrl'
 			})
 
 			// route for the contact page
 			.when('/contact', {
 				templateUrl : 'app/views/contact.html',
-				controller  : 'contactController'
+				controller  : 'InstantSearchController'
 			});
 	});
 
